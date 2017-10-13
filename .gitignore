@@ -1,0 +1,17 @@
+*.iml
+*.log
+*.out
+*.pid
+*.sublime-*
+*.swo
+*.swp
+*.tgz
+.DS_Store
+.idea
+.project
+.strong-pm
+.nyc_output
+node_modules
+npm-debug.log
+coverage/
+dist/

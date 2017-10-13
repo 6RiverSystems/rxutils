@@ -1,0 +1,9 @@
+{
+  "exclude": [
+    "**/*.test.js",
+    "**/*.spec.js",
+    "test/**/*.js"
+  ],
+  "temp-directory": "./coverage/.nyc_output",
+  "report-dir": "./coverage/.nyc_output"
+}

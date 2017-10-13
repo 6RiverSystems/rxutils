@@ -1,0 +1,21 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"outDir": "dist",
+		"target": "es2017",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"allowJs": true,
+		"allowUnreachableCode": false,
+		"sourceMap": true,
+		"declaration": false,
+		"forceConsistentCasingInFileNames": true,
+		"removeComments": false,
+		"preserveConstEnums": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true
+	},
+	"files": [
+		"lib/index.ts"
+	]
+}
