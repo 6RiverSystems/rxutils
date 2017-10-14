@@ -11,6 +11,7 @@
 .project
 .strong-pm
 .nyc_output
+.coveralls.yml
 node_modules
 npm-debug.log
 coverage/

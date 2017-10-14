@@ -1,13 +1,14 @@
 import * as R from 'ramda';
 import * as Rx from 'rxjs';
 
-export const maxAttempts = R.curry((max: number, error$: Rx.Observable<any>) =>
-	error$.scan(function (errorCount: number, err: Error) {
-		if (errorCount >= max - 1) {
-			throw err;
-		}
-		return errorCount + 1;
-	}, 0)
+export const maxAttempts = R.curry((max: number, error$: Rx.Observable<any>) => {
+		return error$.scan(function (errorCount: number, err: Error) {
+			if (errorCount >= max - 1) {
+				throw err;
+			}
+			return errorCount + 1;
+		}, 0);
+	}
 );
 
 export const forever = (error$: Rx.Observable<any>) => {
