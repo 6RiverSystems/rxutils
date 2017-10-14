@@ -22,6 +22,7 @@
     "bluebird": "^3.5.1",
     "chai": "4.1.1",
     "chance": "1.0.4",
+    "coveralls": "^3.0.0",
     "cz-conventional-changelog": "2.0.0",
     "eslint": "4.5.0",
     "eslint-config-defaults": "9.0.0",
