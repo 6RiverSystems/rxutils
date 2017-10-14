@@ -1,9 +1,21 @@
 {
-  "exclude": [
-    "**/*.test.js",
-    "**/*.spec.js",
-    "test/**/*.js"
+  "reporter": [
+    "lcov",
+    "text",
+    "html"
   ],
-  "temp-directory": "./coverage/.nyc_output",
-  "report-dir": "./coverage/.nyc_output"
+  "include": [
+    "lib/**/*.ts",
+    "lib/**/*.tsx"
+  ],
+  "exclude": [
+    "lib/**/*.d.ts",
+    "test/**/*.test.ts",
+    "test/**/*.test.tsx"
+  ],
+  "extension": [
+    ".ts",
+    ".tsx"
+  ],
+  "temp-directory": "./coverage/.nyc_output"
 }
