@@ -22,7 +22,7 @@ describe('defer', () => {
 			);
 			const log = {error: sinon.spy()};
 			const source = Rx.Observable.from(input)
-			.concatMap((input) => defer.safeDefer(() => handler(input), log));
+			.concatMap((v) => defer.safeDefer(() => handler(v), log));
 
 			return new Promise((resolve, reject) => {
 				source.subscribe(() => null, reject, () => {
