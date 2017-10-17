@@ -12,7 +12,7 @@ describe('backoff', () => {
 	const source = Rx.Observable.throw(new Error('noooooo'));
 
 	it('linear', () => {
-		const retries = chance.natural({min: 1, max: 5});
+		const retries = chance.natural({min: 2, max: 5});
 		const factor = chance.natural({min: 1, max: 20});
 		const retry$ = source
 			.retryWhen((error$) => {
@@ -39,7 +39,7 @@ describe('backoff', () => {
 	});
 
 	it('exponential', () => {
-		const retries = chance.natural({min: 1, max: 5});
+		const retries = chance.natural({min: 2, max: 5});
 		const base = chance.natural({min: 1, max: 5});
 		const retry$ = source
 			.retryWhen((error$) => {
