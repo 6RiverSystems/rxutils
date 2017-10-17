@@ -17,7 +17,7 @@
     "@types/lodash": "4.14.74",
     "@types/mocha": "2.2.42",
     "@types/node": "8.0.24",
-    "@types/ramda": "github:types/npm-ramda#dist",
+    "@types/ramda": "^0.24.16",
     "@types/sinon": "^2.3.6",
     "bluebird": "^3.5.1",
     "chai": "4.1.1",
