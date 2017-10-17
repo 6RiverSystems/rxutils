@@ -21,36 +21,6 @@ export const maxAttempts = R.curry((max: number, error$: Rx.Observable<any>) => 
 );
 
 /**
- * Returns an Observable that waits for a period of time and then resubscribes to the
- * source observable each time it emits an error until a limit (max) is reached and
- * then emits that error. The amount of time increases by factor after each error
- *
- * @param {number} max: the number of errors to allow before emitting an error
- * @param {number} factor: the amount of time to increase after each attempt
- * @param {Observable} error$: an Observable that is re-subscribed to on error up to the limit
- * @return {Observable} an Observable of the number of retries
- * @method maxAttemptsWithBackoff
- */
-export const maxAttemptsWithBackoff = R.curry((max: number, factor: number, error$: Rx.Observable<any>) => {
-	return maxAttempts(max, error$).flatMap((i) => Rx.Observable.timer(i * factor));
-});
-
-/**
- * Returns an Observable that waits for a period of time and then resubscribes to the
- * source observable each time it emits an error until a limit (max) is reached and
- * then emits that error. The amount of time increases exponentially by the given base
- *
- * @param {number} max: the number of errors to allow before emitting an error
- * @param {number} base: the base for calculating the amount of time to exponentially increase by
- * @param {Observable} error$: an Observable that is re-subscribed to on error up to the limit
- * @return {Observable} an Observable of the number of retries
- * @method maxAttemptsWithBackoff
- */
-export const maxAttemptsWithExponentialBackoff = R.curry((max: number, base: number, error$: Rx.Observable<any>) => {
-	return maxAttempts(max, error$).flatMap((i) => Rx.Observable.timer(Math.pow(base, i)));
-});
-
-/**
  * Returns an observable that resubscribes to the source observable each time it emits
  * an error
  *
