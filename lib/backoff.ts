@@ -19,7 +19,7 @@ export const linear = R.curry((factor: number, input: number) => {
  * source observable. The amount of time increases exponentially by the given base
  *
  * @param {number} base: the base for calculating the amount of delay time to increase by
- * @param {Observable} input: the exponent for calculating the amount of delay time to increase by
+ * @param {number} input: the exponent for calculating the amount of delay time to increase by
  * @return {Observable} an Observable that emits after a delay
  * @method exponential
  */
