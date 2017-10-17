@@ -46,8 +46,8 @@ describe('retry', () => {
 
 	context('maxAttemptsWithBackoff', () => {
 		it('should retry with backoff', () => {
-			const retries = chance.natural({max: 10});
-			const factor = chance.natural({max: 25});
+			const retries = chance.natural({max: 5});
+			const factor = chance.natural({max: 20});
 			const retry$ = source
 				.retryWhen((error$) => retry.maxAttemptsWithBackoff(retries, factor, error$));
 
@@ -71,8 +71,8 @@ describe('retry', () => {
 
 	context('maxAttemptsWithExponentialBackoff', () => {
 		it('should retry with exponential backoff', () => {
-			const retries = chance.natural({max: 10});
-			const base = chance.natural({max: 10});
+			const retries = chance.natural({max: 5});
+			const base = chance.natural({max: 5});
 			const retry$ = source
 				.retryWhen((error$) => retry.maxAttemptsWithExponentialBackoff(retries, base, error$));
 
