@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import {delay} from '../../lib/Promise';
 
 describe('delay', function() {
-	describe ('it waits approximately the right amount', async function() {
+	it('waits approximately the right amount', async function() {
 		const before = new Date();
 		await delay(1000);
 		const after = new Date();
