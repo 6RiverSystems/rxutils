@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 7.5.0
+    version: 8.8.0
   environment:
     NODE_ENV: test
     MOCHA_OPTS: --reporter mocha-junit-reporter --reporter-options mochaFile=$CIRCLE_TEST_REPORTS/mocha/junit.xml
